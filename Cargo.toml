@@ -3,9 +3,13 @@ name = "rust_lambda_http_test"
 version = "0.1.0"
 authors = ["Calvin Brown <cab025@protonmail.com>"]
 edition = "2018"
-
+autobins = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "bootstrap"
+path = "src/main.rs"
 
 [dependencies]
 lambda_http = "0.1.1"
 lambda_runtime = "0.2.1"
+serde = { version = "1.0", features = ["derive"] }
