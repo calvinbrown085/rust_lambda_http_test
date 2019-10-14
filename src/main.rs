@@ -12,8 +12,8 @@ struct Record {
     kinesis: KinesisRecord
 }
 #[derive(Deserialize, Clone)]
-#[serde(rename_all = "camelCase")]
 struct KinesisRecord {
+    #[serde(rename = "partitionKey")]
     partition_key: String,
     data: String,
 }
